@@ -7,7 +7,7 @@ var statsOpen = false;
 var RN = {
   '1B':'1루타','2B':'2루타','3B':'3루타','HR':'홈런',
   'GO':'땅볼','FO':'뜬공','LO':'직선타','SO':'삼진',
-  'BB':'볼넷','HBP':'사구','SF':'희플','SH':'희번','E':'실책','PR': '대주자'
+  'BB':'볼넷','HBP':'사구','SF':'희플','SH':'희번','E':'실책'
 };
 var FN = {
   'P':'투수','C':'포수','1B':'1루수','2B':'2루수',
@@ -43,9 +43,8 @@ function calcStats() {
       if (a.result === 'HR') hr++;
       if (a.result === 'BB') bb++;
       if (a.result === 'HBP') hbp++;
-      if (a.result === 'SF') sf++;
-      if (a.result === 'SO') so++;
-      if (r === 'PR') continue;
+       (a.result === 'SF') sf++;
+       (a.result === 'SO') so++
       rbi += (a.rbi || 0);
       if (a.run) runs++;
       sb += (a.sb || 0);
