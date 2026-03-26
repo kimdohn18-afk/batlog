@@ -45,6 +45,7 @@ function calcStats() {
       if (a.result === 'HBP') hbp++;
       if (a.result === 'SF') sf++;
       if (a.result === 'SO') so++;
+      if (r === 'PR') continue;
       rbi += (a.rbi || 0);
       if (a.run) runs++;
       sb += (a.sb || 0);
