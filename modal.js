@@ -63,14 +63,13 @@ function showStep1() {
   h += '<button class="modal-btn" onclick="pR(\'SF\')">희플</button>';
   h += '<button class="modal-btn" onclick="pR(\'SH\')">희번</button>';
   h += '<button class="modal-btn" onclick="pR(\'E\')">실책</button></div>';
-  h += '<button class="modal-btn" onclick="pR(\'PR\')">대주자</button></div>';
-  openModal(h);
+    openModal(h);
 }
 
 /* 결과 분기 */
 function pR(r) {
   abR = r;
-   if (r === 'BB' || r === 'HBP' || r === 'PR') { doAddAB(); return; }
+   if (r === 'BB' || r === 'HBP') { doAddAB(); return; }
   if (r === 'SO') { showStepSO(); return; }
   if (r === 'HR') { showStepHR(); return; }
   showStep2();
